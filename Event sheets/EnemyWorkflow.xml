@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EnemyWorkflow</name>
+    <events>
+        <include>Main</include>
+        <event-group description="" sid="3530169068318297" title="START">
+            <sub-events>
+                <event-block sid="5719479839133474">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="4873776260183832" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7562127740319366" type="System">
+                            <param id="0" name="Object to create">ObjPlayer</param>
+                            <param id="1" name="Layer">&quot;Base&quot;</param>
+                            <param id="2" name="X">40</param>
+                            <param id="3" name="Y">100</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="6007267970446161" type="System">
+                            <param id="0" name="Object to create">ObjCamera</param>
+                            <param id="1" name="Layer">&quot;Base&quot;</param>
+                            <param id="2" name="X">40</param>
+                            <param id="3" name="Y">100</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="6832361251880933" type="System">
+                            <param id="0" name="Object to create">sprPlayer</param>
+                            <param id="1" name="Layer">&quot;Base&quot;</param>
+                            <param id="2" name="X">40</param>
+                            <param id="3" name="Y">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Será?</comment>
+		<event-group description="" sid="6942600471014026" title="Enemy_01_Patrol">
+            <sub-events>
+                <comment>teste de comentário</comment>
+                <event-block sid="5676428487093192">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6429315556290923" type="SprEnemy03">
+                            <param id="0" name="Instance variable">Move_Time</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7161779645797495" type="SprEnemy03">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+				<comment>outro teste</comment>
+                <event-block sid="2444074223328838">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7240846051094079" type="SprEnemy03">
+                            <param id="0" name="Instance variable">Move_Time</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="8946197296360401" type="SprEnemy03">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5779402474830012">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8662430765417226" type="SprEnemy03">
+                            <param id="0" name="Object">sprMoveBorder</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3138060366632824">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2434146990504015" type="SprEnemy03">
+                                    <param id="0" name="Instance variable">Move_Time</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8262591392878085" type="SprEnemy03">
+                                    <param id="0" name="Instance variable">Move_Time</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8605990948332596">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2860913216952313" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="5889718872709776" type="SprEnemy03">
+                                    <param id="0" name="Instance variable">Move_Time</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5170297057268588">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4713554061313275" type="SprEnemy03">
+                            <param id="0" name="Object">sprMoveBorder</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="9946861988642461" type="SprEnemy03">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9167665249140978" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="5711007108188654" type="SprEnemy03">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9431657381087557" title="Enemy_02_Archer">
+            <sub-events>
+                <event-block sid="9290247922125099">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="7933586599050241" type="ObjPlayer">
+                            <param id="0" name="Object">ColiderAreaArcher</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9828396715217861" type="SprEnemy02">
+                            <param id="0" name="Instance variable">Time_To_Atack</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="9883699992791691" type="SprEnemy02">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">ObjPlayer.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="8547050571570182" type="SprArrow01">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5943164191007772" type="System">
+                            <param id="0" name="Object to create">SprArrow01</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">SprEnemy02.X</param>
+                            <param id="3" name="Y">SprEnemy02.Y-15</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5433569832950042" type="SprEnemy02">
+                            <param id="0" name="Instance variable">Time_To_Atack</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5080324883457518">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="6501170487445529" type="ObjPlayer">
+                            <param id="0" name="Object">ColiderAreaArcher</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5121095182814986" type="SprEnemy02">
+                            <param id="0" name="Instance variable">Time_To_Atack</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="8503127605637586" type="SprEnemy02">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">ObjPlayer.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="4225397703533999" type="System">
+                            <param id="0" name="Object to create">SprArrow02</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">SprEnemy02.X</param>
+                            <param id="3" name="Y">SprEnemy02.Y-15</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6646035565024016" type="SprEnemy02">
+                            <param id="0" name="Instance variable">Time_To_Atack</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6709154012890548">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="7059656513042187" type="SprEnemy02">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">ObjPlayer.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="405184039533803" type="SprEnemy02">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8927877809313841" type="SprArrow01">
+                            <param id="0" name="Angle">-180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1498339164090261">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="1074459409132174" type="SprEnemy02">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">ObjPlayer.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="9202967256779749" type="SprEnemy02">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2192159307652653">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="9053582426505052" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1215011312985281" type="SprEnemy02">
+                            <param id="0" name="Instance variable">Time_To_Atack</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="9890435267905003" type="SprEnemy02">
+                            <param id="0" name="Instance variable">Time_To_Atack</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="1261941276083216">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7804113533138502" type="SprArrow02">
+                            <param id="0" name="Object">TilSolid</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="5526902590728316" type="SprArrow02">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="7009892227109044" type="SprArrow02">
+                            <param id="0" name="Angle">4</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6035427966669335" type="System">
+                            <param id="0" name="Seconds">0.05</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="7541667178182163" type="SprArrow02">
+                            <param id="0" name="Angle">-4</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6955385970042988" type="System">
+                            <param id="0" name="Seconds">0.05</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="2948903894544792" type="SprArrow02">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="6109539794602092" type="SprArrow02">
+                            <param id="0" name="Angle">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1006565606350625" type="System">
+                            <param id="0" name="Seconds">0.05</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="5609425676326013" type="SprArrow02">
+                            <param id="0" name="Angle">-2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5730169346689527" type="System">
+                            <param id="0" name="Seconds">0.05</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="7277165790648156" type="SprArrow02">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3973491591098321" type="SprArrow02" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="1134136930807116">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9450376055048688" type="SprArrow01">
+                            <param id="0" name="Object">TilSolid</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="2572505549220794" type="SprArrow01">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="7174114061084802" type="SprArrow01">
+                            <param id="0" name="Angle">4</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4790182869964475" type="System">
+                            <param id="0" name="Seconds">0.05</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="6731584253175836" type="SprArrow01">
+                            <param id="0" name="Angle">-4</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2571864126668738" type="System">
+                            <param id="0" name="Seconds">0.05</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="2297783586557407" type="SprArrow01">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="5576779166815609" type="SprArrow01">
+                            <param id="0" name="Angle">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1464803696738697" type="System">
+                            <param id="0" name="Seconds">0.05</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="6730605293143665" type="SprArrow01">
+                            <param id="0" name="Angle">-2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3510329483963665" type="System">
+                            <param id="0" name="Seconds">0.05</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="8384598789768487" type="SprArrow01">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="8692312141743191" type="SprArrow01" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

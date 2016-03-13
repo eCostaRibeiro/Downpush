@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TempleTeste</name>
+    <events>
+        <include>Main</include>
+        <event-block sid="839549735451604">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7459378654359135" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="5567348512200461" type="System">
+                    <param id="0" name="Object to create">ObjPlayer</param>
+                    <param id="1" name="Layer">&quot;Base&quot;</param>
+                    <param id="2" name="X">12</param>
+                    <param id="3" name="Y">243</param>
+                </action>
+                <action id="-3" name="Create object" sid="9073381874440548" type="System">
+                    <param id="0" name="Object to create">ObjCamera</param>
+                    <param id="1" name="Layer">&quot;Base&quot;</param>
+                    <param id="2" name="X">12</param>
+                    <param id="3" name="Y">243</param>
+                </action>
+                <action id="-3" name="Create object" sid="5744987255845179" type="System">
+                    <param id="0" name="Object to create">sprPlayer</param>
+                    <param id="1" name="Layer">&quot;Base&quot;</param>
+                    <param id="2" name="X">12</param>
+                    <param id="3" name="Y">243</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

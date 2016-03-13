@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CameraAndWindow</name>
+    <events>
+        <event-group description="" sid="5993177175038952" title="CAMERA">
+            <sub-events>
+                <event-block sid="8695358154166151">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="2785617110904493" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="9061706332431578" type="ObjCamera">
+                            <param id="0" name="X">lerp(Self.X, ObjPlayer.X, 1)</param>
+                            <param id="1" name="Y">lerp(Self.Y, ObjPlayer.Y-25, 1)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="2451561192313341" type="sprPlayer">
+                            <param id="0" name="X">ObjPlayer.X</param>
+                            <param id="1" name="Y">ObjPlayer.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="1723076795516858" type="sprVector">
+                            <param id="0" name="X">ObjPlayer.X</param>
+                            <param id="1" name="Y">ObjPlayer.Y-45</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9456454205704802" title="WINDOW">
+            <sub-events>
+                <event-block sid="2898075415964053">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="4569588952654904" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Request fullscreen" sid="6902262232673288" type="Browser">
+                            <param id="0" name="Mode">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="2851504806811439">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="7607716627653745" type="Keyboard">
+                            <param id="0" name="Key">27 (Esc)</param>
+                        </condition>
+                        <condition id="3" name="Is button down" sid="5914759278976925" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Close" sid="2751033050410241" type="Browser" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Enemies</name>
+    <events>
+        <event-block sid="6997454032424007">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1181861598857885" type="Player">
+                    <param id="0" name="Object">Ene</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6541028083041217" type="Player" />
+            </actions>
+        </event-block>
+        <event-block sid="3350456435023041">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2921523167438615" type="spr_Player">
+                    <param id="0" name="Object">Ene</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="6732774184881603" type="Ene">
+                    <param id="0" name="Instance variable">HP</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="4880144917191913" type="Ene">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4850819044255885">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="8785208744441944" type="Ene">
+                    <param id="0" name="Instance variable">HP</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2200660420268091" type="Ene" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

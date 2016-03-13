@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>DanoeHP</name>
+    <events>
+        <event-group description="" sid="6619510247474163" title="Barra de HP">
+            <sub-events>
+                <event-block sid="7190370824312551">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1850010663336883" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="9414323679996858" type="SprHelthBar">
+                            <param id="0" name="Width">HP</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2845147691445136">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2183232251059123" type="System">
+                            <param id="0" name="Variable">HP</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3383705374541179" type="System">
+                            <param id="0" name="Variable">HP</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4333161043154494">
+                    <conditions>
+                        <condition id="-5" name="Compare width" sid="4603497092568768" type="SprHelthBar">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Width">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="9424734353914252" type="SprHelthBar">
+                            <param id="0" name="Width">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6213936416632038">
+                    <conditions>
+                        <condition id="-5" name="Compare width" sid="5092846434255009" type="SprHelthBar">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Width">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="9633803748193277" type="SprHelthBar">
+                            <param id="0" name="Width">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1726687767067273" title="Danos e danos">
+            <sub-events>
+                <event-block sid="5297703994459445">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8217549497209905" type="ObjPlayer">
+                            <param id="0" name="Object">FamEnemy01</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="8745877692437667" type="sprPlayer">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="8405931585264032" type="System">
+                            <param id="0" name="Variable">HP</param>
+                            <param id="1" name="Value">13</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="7215253002885055" type="SprHelthBar">
+                            <param id="0" name="Width">HP</param>
+                        </action>
+                        <action id="-17" name="Move forward" sid="9297497198825893" type="ObjPlayer">
+                            <param id="0" name="Distance">-30</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="622891184958417" type="ObjPlayer">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7702284960333104">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9493913530121317" type="sprPlayer">
+                            <param id="0" name="Object">FamEnemy01</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="6641131746277951" type="FamEnemy01">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="9042809321695229" type="FamEnemy01">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="9685367380671381" type="ObjPlayer">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9001762885387791" type="System">
+                            <param id="0" name="Seconds">0.6</param>
+                        </action>
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="5213253137541847" type="ObjPlayer">
+                            <param id="0" name="Input">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8987321476210603" title="LOOT">
+            <sub-events>
+                <event-block sid="4294850499852837">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5656352453667055" type="ObjPlayer">
+                            <param id="0" name="Object">SprCura01</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2905792453342223" type="SprCura01" />
+                        <action id="-10" name="Add to" sid="7527488805795862" type="System">
+                            <param id="0" name="Variable">HP</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="9644832214361873" type="SprHelthBar">
+                            <param id="0" name="Width">HP</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="363960400270257">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5828124546513161" type="ObjPlayer">
+                            <param id="0" name="Object">SprCura02</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9571335210236573" type="SprCura02" />
+                        <action id="-10" name="Add to" sid="3671121016668785" type="System">
+                            <param id="0" name="Variable">HP</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="1314490794285189" type="SprHelthBar">
+                            <param id="0" name="Width">HP</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5966036212061551">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5293934710932848" type="ObjPlayer">
+                            <param id="0" name="Object">SprCura03</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4386213507571642" type="SprCura03" />
+                        <action id="-10" name="Add to" sid="6998642531122535" type="System">
+                            <param id="0" name="Variable">HP</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="8416513683009722" type="SprHelthBar">
+                            <param id="0" name="Width">HP</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4465114592594295">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2600869983851928" type="FamEnemy01">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7273225189554693" type="FamEnemy01" />
+                        <action id="-9" name="Set value" sid="8145124017959676" type="System">
+                            <param id="0" name="Variable">Loot</param>
+                            <param id="1" name="Value">round(random(1,5))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9312411658209467">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="608770278192423" type="System">
+                                    <param id="0" name="Variable">Loot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="4065039352840177" type="System">
+                                    <param id="0" name="Object to create">SprCura01</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">FamEnemy01.X</param>
+                                    <param id="3" name="Y">FamEnemy01.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3239541734245157">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9104943704681236" type="System">
+                                    <param id="0" name="Variable">Loot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-3" name="Create object" sid="7318145104280092" type="System">
+                                    <param id="0" name="Object to create">SprCura02</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">FamEnemy01.X</param>
+                                    <param id="3" name="Y">FamEnemy01.Y</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4590312961169571" type="System">
+                                    <param id="0" name="Object to create">SprCura01</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">FamEnemy01.X</param>
+                                    <param id="3" name="Y">FamEnemy01.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6123746709043773">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9977314154989497" type="System">
+                                    <param id="0" name="Variable">Loot</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-3" name="Create object" sid="3042820974218722" type="System">
+                                    <param id="0" name="Object to create">SprCura03</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">FamEnemy01.X</param>
+                                    <param id="3" name="Y">FamEnemy01.Y</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="7776846966630657" type="System">
+                                    <param id="0" name="Object to create">SprCura01</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">FamEnemy01.X</param>
+                                    <param id="3" name="Y">FamEnemy01.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

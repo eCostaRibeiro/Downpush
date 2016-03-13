@@ -1,0 +1,6 @@
+[0312/140650:ERROR:crashpad_client_win.cc(316)] CreateProcess: O sistema não pode encontrar o arquivo especificado. (0x2)
+[0312/140650:ERROR:crash_report_database_win.cc(549)] CreateDirectory C:\Users\smailinbol.com.br\AppData\Local\User Data\Crashpad: O sistema não pode encontrar o caminho especificado. (0x3)
+[0312/140652:INFO:nw_package.cc(175)] "C:\Program Files\NWjsForC2\win32\nw.exe" --ignore-gpu-blacklist "C:\Users\smailinbol.com.br\AppData\Local\Temp\c2-395E62\html5\package.zip"
+[0312/140653:ERROR:registration_protocol_win.cc(53)] CreateFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[0312/140753:ERROR:registration_protocol_win.cc(53)] CreateFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[0312/140753:ERROR:image_metadata_extractor.cc(114)] Couldn't load libexif. 126

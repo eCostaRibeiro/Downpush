@@ -6,3 +6,7 @@
 #Temporary files
 *.capx.backup*
 *.capx.autosave*
+
+#System Files
+
+*.db
