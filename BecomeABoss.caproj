@@ -8,7 +8,7 @@
     <author-website>http://spatiumstudios.tumblr.com/</author-website>
     <app-id>com.spatiumstudios.becomeaboss</app-id>
     <unique-id>3bjakvjsh4zph</unique-id>
-    <saved-with-version>22100</saved-with-version>
+    <saved-with-version>20402</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
