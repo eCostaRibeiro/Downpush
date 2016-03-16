@@ -271,6 +271,7 @@
             <sub-events>
                 <event-group description="" sid="7937887658815306" title="Mushuroom_Jump">
                     <sub-events>
+                        <comment>Impulso ao se chocar com o cogumelo</comment>
                         <event-block sid="3672425439108693">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="2125267174533118" type="ObjPlayer">
@@ -286,6 +287,31 @@
                                     <param id="0" name="Vector Y">-500</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="8772764710358865" type="sprPlayer">
+                                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Mais Impulso ao se chocar com o cogumelo com o pulo pressionado</comment>
+                        <event-block sid="7510622661679972">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="121147264296289" type="ObjPlayer">
+                                    <param id="0" name="Object">sprMushroom</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="5310413956995709" type="ObjPlayer">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">sprMushroom.Y</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="1943058651623102" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="161036373223391" type="ObjPlayer">
+                                    <param id="0" name="Vector Y">-700</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="2057535931790581" type="sprPlayer">
                                     <param id="0" name="Animation">&quot;Jumping&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -325,6 +351,7 @@
         </event-block>
         <event-group description="" sid="5076051789776814" title="Dash">
             <sub-events>
+                <comment>Cria um dash</comment>
                 <event-block sid="5311614470312749">
                     <conditions>
                         <condition id="6" name="On button pressed" sid="5486033576753136" type="Gamepad">
@@ -385,5 +412,24 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Colddown do dash</comment>
+        <event-block sid="8541767082929365">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1711254632993668" type="System">
+                    <param id="0" name="Variable">EstaNoChao</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="9022063396810835" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-9" name="Set value" sid="6553824229453927" type="System">
+                    <param id="0" name="Variable">EstaNoChao</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
