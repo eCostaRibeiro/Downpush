@@ -6,7 +6,7 @@
         <include>Main</include>
         <event-group description="" sid="3530169068318297" title="START">
             <sub-events>
-                <event-block sid="5719479839133474">
+                <event-block disabled="1" sid="5719479839133474">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="4873776260183832" type="System" />
                     </conditions>
@@ -34,7 +34,7 @@
             </sub-events>
         </event-group>
         <comment>Será?</comment>
-		<event-group description="" sid="6942600471014026" title="Enemy_01_Patrol">
+        <event-group description="" sid="6942600471014026" title="Enemy_01_Patrol">
             <sub-events>
                 <comment>teste de comentário</comment>
                 <event-block sid="5676428487093192">
@@ -51,7 +51,7 @@
                         </action>
                     </actions>
                 </event-block>
-				<comment>outro teste</comment>
+                <comment>outro teste</comment>
                 <event-block sid="2444074223328838">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="7240846051094079" type="SprEnemy03">

@@ -203,9 +203,13 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <HP>2</HP>
                         <On_Atack>false</On_Atack>
                         <Time_To_Atack>0</Time_To_Atack>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -250,10 +254,14 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <HP>2</HP>
+                    </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Flash" />
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>100</speed>
+                                <speed>300</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -284,10 +292,14 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <HP>2</HP>
+                    </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Flash" />
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>1000</speed>
+                                <speed>300</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
