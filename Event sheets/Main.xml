@@ -10,5 +10,11 @@
         <include>Doors</include>
         <include>CameraAndWindow</include>
         <include>ControlsAndAnimations</include>
+        <event-block sid="7920400792029343">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2061713707880475" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>

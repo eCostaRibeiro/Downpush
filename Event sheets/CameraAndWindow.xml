@@ -5,6 +5,7 @@
     <events>
         <event-group description="" sid="5993177175038952" title="CAMERA">
             <sub-events>
+                <comment>Começa inserindo o player, sprite e camera no mapa</comment>
                 <event-block sid="8695358154166151">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="2785617110904493" type="System" />
