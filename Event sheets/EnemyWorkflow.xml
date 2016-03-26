@@ -52,10 +52,7 @@
                         </action>
                     </actions>
                 </event-block>
-<<<<<<< HEAD
                 <comment>outro teste</comment>
-=======
->>>>>>> da4ded35379f594f864d7e9d60edf35a56179e9d
                 <event-block sid="2444074223328838">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="7240846051094079" type="SprEnemy03">
