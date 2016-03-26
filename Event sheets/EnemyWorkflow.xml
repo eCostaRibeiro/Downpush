@@ -6,7 +6,12 @@
         <include>Main</include>
         <event-group description="" sid="3530169068318297" title="START">
             <sub-events>
+<!-- <<<<<<< HEAD -->
                 <event-block disabled="1" sid="5719479839133474">
+<!-- ======= -->
+                <comment>Começa inserindo o player, sprite e camera no mapa</comment>
+                <event-block sid="5719479839133474">
+<!-->>>>>>> da4ded35379f594f864d7e9d60edf35a56179e9d -->
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="4873776260183832" type="System" />
                     </conditions>
@@ -36,7 +41,7 @@
         <comment>Será?</comment>
         <event-group description="" sid="6942600471014026" title="Enemy_01_Patrol">
             <sub-events>
-                <comment>teste de comentário</comment>
+                <comment>Movimento simples do inimigo</comment>
                 <event-block sid="5676428487093192">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="6429315556290923" type="SprEnemy03">
@@ -51,7 +56,10 @@
                         </action>
                     </actions>
                 </event-block>
+<!-- <<<<<<< HEAD -->
                 <comment>outro teste</comment>
+<!--=======
+>>>>>>> da4ded35379f594f864d7e9d60edf35a56179e9d -->
                 <event-block sid="2444074223328838">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="7240846051094079" type="SprEnemy03">
@@ -66,6 +74,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Limitação do movimento do inimigo</comment>
                 <event-block sid="5779402474830012">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="8662430765417226" type="SprEnemy03">
@@ -124,6 +133,7 @@
         </event-group>
         <event-group description="" sid="9431657381087557" title="Enemy_02_Archer">
             <sub-events>
+                <comment>Arqueiro Joga flecha de um lado</comment>
                 <event-block sid="9290247922125099">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="7933586599050241" type="ObjPlayer">
@@ -155,6 +165,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Arqueiro Joga flecha para o outro lado</comment>
                 <event-block sid="5080324883457518">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="6501170487445529" type="ObjPlayer">
@@ -183,6 +194,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Arqueiro se vira para o player</comment>
                 <event-block sid="6709154012890548">
                     <conditions>
                         <condition id="-1" name="Compare X" sid="7059656513042187" type="SprEnemy02">
@@ -199,6 +211,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Arqueiro se vira para o player</comment>
                 <event-block sid="1498339164090261">
                     <conditions>
                         <condition id="-1" name="Compare X" sid="1074459409132174" type="SprEnemy02">
@@ -212,6 +225,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Respawn de flechas</comment>
                 <event-block sid="2192159307652653">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="9053582426505052" type="System">
@@ -230,6 +244,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Flacha bate a parede e balança</comment>
                 <event-block any="1" sid="1261941276083216">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="7804113533138502" type="SprArrow02">
@@ -318,5 +333,23 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="9809069814420129">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="137133200964529" type="SprEneLanceiro">
+                    <param id="0" name="Object">ObjPlayer</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="6158779836480152" type="SprLanca">
+                    <param id="0" name="X">-50</param>
+                </action>
+                <action id="-16" name="Wait" sid="4714218158879873" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-1" name="Set X" sid="1573905872502737" type="SprLanca">
+                    <param id="0" name="X">50</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
