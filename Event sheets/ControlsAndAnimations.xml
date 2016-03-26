@@ -478,13 +478,10 @@
 					<param id="0" name="Max Speed">30</param>
 				</action>
 			</actions>
-			<sub-events>
-<!-- <<<<<< HEAD -->
+			<!--<sub-events> -->
 				<event-block sid="3522306160410143">
-<!-- ======= -->
 					<comment>Cria um dash</comment>
 					<event-block sid="5311614470312749">
-<!-- >>>>>>> da4ded35379f594f864d7e9d60edf35a56179e9d -->
 						<conditions>
 							<condition id="-1" name="Compare X" sid="5570284951970377" type="ObjPlayer">
 								<param id="0" name="Comparison">2</param>
@@ -516,10 +513,6 @@
 							</action>
 						</actions>
 					</event-block>
-				
-			
-
-	
 					<comment>Colddown do dash</comment>
 					<event-block sid="8541767082929365">
 						<conditions>
@@ -539,9 +532,8 @@
 							</action>
 						</actions>
 					</event-block>	
-<!-- >>>>>>> da4ded35379f594f864d7e9d60edf35a56179e9d -->
 				</event-block>
-			</sub-events>
+			<!-- </sub-events> -->
 		</event-block>
 	</events>
 </c2eventsheet>
