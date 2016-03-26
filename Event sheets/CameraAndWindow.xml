@@ -12,7 +12,7 @@
                     <actions>
                         <action id="-3" name="Set position" sid="9061706332431578" type="ObjCamera">
                             <param id="0" name="X">lerp(Self.X, ObjPlayer.X, 1)</param>
-                            <param id="1" name="Y">lerp(Self.Y, ObjPlayer.Y-25, 1)</param>
+                            <param id="1" name="Y">lerp(Self.Y, ObjPlayer.Y-45, 1)</param>
                         </action>
                         <action id="-3" name="Set position" sid="2451561192313341" type="sprPlayer">
                             <param id="0" name="X">ObjPlayer.X</param>

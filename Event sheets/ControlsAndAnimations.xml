@@ -283,7 +283,7 @@
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="9" name="Set vector Y" sid="567930036367319" type="ObjPlayer">
-                                    <param id="0" name="Vector Y">-500</param>
+                                    <param id="0" name="Vector Y">-570</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="8772764710358865" type="sprPlayer">
                                     <param id="0" name="Animation">&quot;Jumping&quot;</param>

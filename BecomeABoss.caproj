@@ -55,7 +55,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -189,6 +189,63 @@
                     <plugin id="Tilemap" />
                     <texture original-source="C:\Users\brank\Desktop\become a boss\Grounds\Grass_01\Grass_01_A.png" />
                     <tiles />
+                </object-type>
+                <object-type name="tilJumpThrough" sid="3012704817290942">
+                    <plugin id="Tilemap" />
+                    <behaviors>
+                        <behavior-type name="Jumpthru" sid="5631374406708791">
+                            <behavior id="jumpthru" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture />
+                    <tiles>
+                        <tile id="0">
+                            <collision-poly>
+                                <point x="0" y="0.8" />
+                                <point x="1" y="0.8" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="1">
+                            <collision-poly>
+                                <point x="0" y="0.4" />
+                                <point x="1" y="0.4" />
+                                <point x="1" y="0.6" />
+                                <point x="0" y="0.6" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="2">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.2" />
+                                <point x="0" y="0.2" />
+                            </collision-poly>
+                        </tile>
+                    </tiles>
+                </object-type>
+                <object-type name="TilSolid" sid="6083456659949524">
+                    <plugin id="Tilemap" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="2291563657081687">
+                            <behavior id="solid" />
+                        </behavior-type>
+                        <behavior-type name="Physics" sid="8332766091414603">
+                            <behavior id="Physics" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="C:\Become_a_Boss_Branko\Downpush\Textures\TilSolid.png" />
+                    <tiles>
+                        <tile id="1">
+                            <collision-poly>
+                                <point x="0" y="0.85" />
+                                <point x="1" y="0.85" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                    </tiles>
                 </object-type>
             </object-folder>
             <object-folder name="Sprites">
@@ -617,28 +674,6 @@
             </object-type>
         </object-folder>
         <object-folder name="Objetos">
-            <object-type name="TilSolid" sid="6083456659949524">
-                <plugin id="Tilemap" />
-                <behaviors>
-                    <behavior-type name="Solid" sid="2291563657081687">
-                        <behavior id="solid" />
-                    </behavior-type>
-                    <behavior-type name="Physics" sid="8332766091414603">
-                        <behavior id="Physics" />
-                    </behavior-type>
-                </behaviors>
-                <texture />
-                <tiles>
-                    <tile id="1">
-                        <collision-poly>
-                            <point x="0" y="0.0625" />
-                            <point x="1" y="0.0625" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </tile>
-                </tiles>
-            </object-type>
             <object-type name="ObjJumpThrough" sid="3800818091760929">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -651,7 +686,22 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6199254661173051" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.6" />
+                        <frame duration="1" hotspotX="0.166667" hotspotY="0.6">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.333333" y="0" />
+                                <point x="0.333333" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MaskTransition" sid="9803894266103309">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3848567584708561" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -664,6 +714,54 @@
         </object-type>
         <object-type name="Keyboard" sid="3845047333387572">
             <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="PortaA" sid="8852759481712866">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5787817779774192" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PortaB" sid="1542276831484654">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1354833083576211" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PortaC" sid="4585909442283725">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8486737503625338" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PortaD" sid="9102970459676695">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8845525603090077" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PortaE" sid="4167601046300044">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1076844285410019" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MaskSecret" sid="2103315609046783">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1936043867019623" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -683,12 +781,28 @@
         </family>
     </families>
     <layout-folder>
+        <layout-folder name="Fase01">
+            <layout>01sala01.xml</layout>
+            <layout>01sala02.xml</layout>
+            <layout>01sala03.xml</layout>
+            <layout>01sala04.xml</layout>
+            <layout>01sala05.xml</layout>
+            <layout>01sala06.xml</layout>
+        </layout-folder>
+        <layout-folder name="Fase02">
+            <layout>02sala01.xml</layout>
+        </layout-folder>
         <layout>Base.xml</layout>
         <layout>Stage01.xml</layout>
         <layout>TempleTeste.xml</layout>
         <layout>EnemyWorkflow.xml</layout>
+        <layout>Transicao.xml</layout>
     </layout-folder>
     <event-folder>
+        <event-folder name="Fase01">
+            <event-sheet>Sala01.xml</event-sheet>
+            <event-sheet>Sala02.xml</event-sheet>
+        </event-folder>
         <event-sheet>Main.xml</event-sheet>
         <event-sheet>ControlsAndAnimations.xml</event-sheet>
         <event-sheet>CameraAndWindow.xml</event-sheet>
@@ -697,6 +811,12 @@
         <event-sheet>TempleTeste.xml</event-sheet>
         <event-sheet>EnemyWorkflow.xml</event-sheet>
         <event-sheet>DanoeHP.xml</event-sheet>
+        <event-sheet>Sala03.xml</event-sheet>
+        <event-sheet>Sala04.xml</event-sheet>
+        <event-sheet>Sala05.xml</event-sheet>
+        <event-sheet>Sala06.xml</event-sheet>
+        <event-sheet>Transicao.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
