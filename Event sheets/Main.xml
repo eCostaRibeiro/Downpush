@@ -13,6 +13,7 @@
         <include>Doors</include>
         <include>CameraAndWindow</include>
         <include>ControlsAndAnimations</include>
+<<<<<<< HEAD
         <event-group description="" sid="1456685294406962" title="TransitionRoom">
             <sub-events>
                 <event-block sid="4298728763182355">
@@ -103,5 +104,13 @@
                 </event-block>
             </sub-events>
         </event-group>
+=======
+        <event-block sid="7920400792029343">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2061713707880475" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+>>>>>>> da4ded35379f594f864d7e9d60edf35a56179e9d
     </events>
 </c2eventsheet>
