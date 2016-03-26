@@ -12,7 +12,7 @@
         <vertical>500</vertical>
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
-    <layers>
+    <layers>0
         <layer name="bkg_Sky_2" sid="1243499260236432">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -2385,6 +2385,18 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+					<behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <instance-variables>
                         <On_Atack>false</On_Atack>
                         <Time_To_Atack>0</Time_To_Atack>
