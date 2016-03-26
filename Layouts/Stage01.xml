@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>Stage01</name>
     <sid>5508188828777956</sid>
@@ -80,6 +80,18 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <instance-variables>
                         <On_Atack>false</On_Atack>
                         <Time_To_Atack>0</Time_To_Atack>
@@ -2167,11 +2179,11 @@
                         </behavior-instance>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>120</max-speed>
+                                <max-speed>130</max-speed>
                                 <acceleration>500</acceleration>
                                 <deceleration>500</deceleration>
-                                <jump-strength>200</jump-strength>
-                                <gravity>880</gravity>
+                                <jump-strength>190</jump-strength>
+                                <gravity>870</gravity>
                                 <max-fall-speed>500</max-fall-speed>
                                 <double-jump>Enabled</double-jump>
                                 <jump-sustain>220</jump-sustain>
