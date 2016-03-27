@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Sala03</name>
+    <events>
+        <include>Main</include>
+        <event-block sid="7544630091361931">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2446573182567035" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4924343294380134" type="System">
+                    <param id="0" name="Variable">RoomNow</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-3" name="Create object" sid="2792492476024585" type="System">
+                    <param id="0" name="Object to create">ObjPlayer</param>
+                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                    <param id="2" name="X">RoomPositionX</param>
+                    <param id="3" name="Y">RoomPositionY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7164159378337002">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="3999398974087486" type="ObjPlayer">
+                    <param id="0" name="Object">PortaA</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2062425958078705" type="System">
+                    <param id="0" name="Variable">RoomPositionX</param>
+                    <param id="1" name="Value">1480</param>
+                </action>
+                <action id="-9" name="Set value" sid="8243905616053103" type="System">
+                    <param id="0" name="Variable">RoomPositionY</param>
+                    <param id="1" name="Value">460</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="5043338591088808" type="System">
+                    <param id="0" name="Layout">01sala01</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2219196173617888">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="9477642457516538" type="ObjPlayer">
+                    <param id="0" name="Object">PortaB</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6643925758875549" type="System">
+                    <param id="0" name="Variable">RoomPositionX</param>
+                    <param id="1" name="Value">880</param>
+                </action>
+                <action id="-9" name="Set value" sid="2987430671506275" type="System">
+                    <param id="0" name="Variable">RoomPositionY</param>
+                    <param id="1" name="Value">560</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="2761840814844308" type="System">
+                    <param id="0" name="Layout">01sala04</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2190689862938908">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="4839388042119556" type="ObjPlayer">
+                    <param id="0" name="Object">PortaC</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9802992029430894" type="System">
+                    <param id="0" name="Variable">RoomPositionX</param>
+                    <param id="1" name="Value">320</param>
+                </action>
+                <action id="-9" name="Set value" sid="5651543992294615" type="System">
+                    <param id="0" name="Variable">RoomPositionY</param>
+                    <param id="1" name="Value">740</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="7459739553104035" type="System">
+                    <param id="0" name="Layout">01sala05</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6635820473084009">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="6984149292812835" type="ObjPlayer">
+                    <param id="0" name="Object">PortaD</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6524640414152647" type="System">
+                    <param id="0" name="Variable">RoomPositionX</param>
+                    <param id="1" name="Value">380</param>
+                </action>
+                <action id="-9" name="Set value" sid="3880099801030523" type="System">
+                    <param id="0" name="Variable">RoomPositionY</param>
+                    <param id="1" name="Value">340</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="7443962071685313" type="System">
+                    <param id="0" name="Layout">01sala05</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9424601192262802">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="1187305411894719" type="ObjPlayer">
+                    <param id="0" name="Object">PortaE</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4430853348743596" type="System">
+                    <param id="0" name="Variable">RoomPositionX</param>
+                    <param id="1" name="Value">280</param>
+                </action>
+                <action id="-9" name="Set value" sid="6120182585787471" type="System">
+                    <param id="0" name="Variable">RoomPositionY</param>
+                    <param id="1" name="Value">420</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="6151101345892563" type="System">
+                    <param id="0" name="Layout">01sala06</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6311072800275013">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="7740415852960286" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7254877873176065" type="ObjPlayer" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

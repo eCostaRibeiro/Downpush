@@ -3,13 +3,107 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
-        <include>EnemyWorkflow</include>
+        <variable constant="0" name="NextRoom" sid="8362853196724297" static="0" type="text"></variable>
+        <variable constant="0" name="RoomPositionX" sid="8527739983745007" static="0" type="number">260</variable>
+        <variable constant="0" name="RoomPositionY" sid="3645233344543688" static="0" type="number">860</variable>
+        <variable constant="0" name="RoomNow" sid="2712078250941213" static="0" type="number">0</variable>
         <variable constant="0" name="Loot" sid="1264432173137072" static="0" type="number">0</variable>
         <variable constant="0" name="HP" sid="7123826300981896" static="0" type="number">100</variable>
-        <include>DanoeHP</include>
+        <include>EnemyWorkflow</include>
+		<include>DanoeHP</include>
         <include>Doors</include>
         <include>CameraAndWindow</include>
         <include>ControlsAndAnimations</include>
+        <event-group description="" sid="1456685294406962" title="TransitionRoom">
+            <sub-events>
+                <event-block sid="4298728763182355">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6548851660963578" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="922554129867977" type="System">
+                            <param id="0" name="Object to create">MaskTransition</param>
+                            <param id="1" name="Layer">&quot;MaskTransition&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="9525344752358012" type="MaskTransition">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6051703971608825" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="3002580226140456" type="System">
+                            <param id="0" name="Group name">&quot;TransitionTime&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" inactive="1" sid="32929438371671" title="TransitionTime">
+                    <sub-events>
+                        <event-block sid="6378096356098052">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="7251844250484692" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
+                                <condition id="-10" name="Compare opacity" sid="2140238147900332" type="MaskTransition">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="Opacity">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="1599117304352473" type="MaskTransition">
+                                    <param id="0" name="Opacity">MaskTransition.Opacity-5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="7851024110826967">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="3168726768168543" type="MaskTransition">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Opacity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="8439023386640114" type="System">
+                            <param id="0" name="Group name">&quot;TransitionTime&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2325202165861548" type="MaskTransition" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1488826083926197" title="MaskSecrets">
+            <sub-events>
+                <event-block sid="2673395544875959">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="863340554156713" type="ObjPlayer">
+                            <param id="0" name="Object">MaskSecret</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="5327668359170426" type="MaskSecret">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2592211069007373">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="2129792666275465" type="ObjPlayer">
+                            <param id="0" name="Object">MaskSecret</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7792653594729901" type="MaskSecret">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="7920400792029343">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="2061713707880475" type="System" />
